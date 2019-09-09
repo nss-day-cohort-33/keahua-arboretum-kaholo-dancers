@@ -1,15 +1,15 @@
 import os
 from arboretum import Arboretum
-from actions import annex_habitat
-from actions import release_animal
-from actions import build_facility_report
-from actions import add_plant
-from actions import feed_animal
+from actions.annex import annex_habitat
+from actions.release_animal import release_animal
+from actions.report import build_facility_report
+from actions.feed_animal import feed_animal
+from actions.cultivate_plant import cultivate_plant
 
 keahua = Arboretum("Keahua Arboretum", "123 Paukauila Lane")
 
 def build_menu():
-    os.system('cls' if os.name == 'nt' else 'clear')
+    # os.system('cls' if os.name == 'nt' else 'clear')
     print("1. Annex Habitat")
     print("2. Release Animal into Habitat")
     print("3. Feed Animal")
@@ -33,10 +33,10 @@ def main_menu():
         release_animal(keahua)
 
     if choice == "3":
-        pass
+        feed_animal(keahua)
 
     if choice == "4":
-        pass
+        cultivate_plant(keahua)
 
     if choice == "5":
         build_facility_report(keahua)
