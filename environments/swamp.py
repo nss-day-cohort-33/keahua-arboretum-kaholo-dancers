@@ -1,12 +1,12 @@
 import sys
 sys.path.append('../')
 
-from environments.environment import Environment
-from interfaces.habitats import IStagnant
+# from environments.environment import Environment
+# from interfaces.habitat import IStagnant
 # from animals.
 
 
-class Swamp(Environment):
+class Swamp():
 
     def __init__(self, name):
       self.name = name
@@ -16,7 +16,7 @@ class Swamp(Environment):
         return "This place has a bunch of animals in it"
 
     def addInhabitant(self, item):
-        if not isinstance(item, IStagnant):
+        if not isinstance(item):
             raise TypeError(f"{item} is not of type IStagnant")
         self.inhabitants.append(item)
 
