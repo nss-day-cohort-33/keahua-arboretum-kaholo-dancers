@@ -1,6 +1,6 @@
 class ISwimming:
 
-    def __init__(self):
+    def __init__(self, swim_speed, maximum_depth):
         self.swim_speed = 0
         self.maximum_depth = 0
 
