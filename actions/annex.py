@@ -1,5 +1,5 @@
 import os
-from environments import River
+from biomes import River
 
 def annex_habitat(arboretum):
     os.system('cls' if os.name == 'nt' else 'clear')
