@@ -1,4 +1,5 @@
 from .biome import Biome
+from interfaces import Identifiable
 
 # from environments.environment import Environment
 # from interfaces.habitat import IStagnant
@@ -6,10 +7,11 @@ from .biome import Biome
 
 # from interfaces.habitats import IStagnant
 
-class Swamp():
+class Swamp(Biome, Identifiable):
 
-    def __init__(self, name):
-        Biome.__init__(self, 8, 12, "Swamp")
+    def __init__(self):
+        Biome.__init__(self, 8, 12, self)
+        Identifiable.__init__(self)
         # self.name = name
         # self.inhabitants = []
 
