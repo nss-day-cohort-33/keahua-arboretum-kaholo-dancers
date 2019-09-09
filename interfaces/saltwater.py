@@ -1,6 +1,4 @@
-from .aquatic import IAquatic
-
-class ISaltwater(IAquatic):
+class ISaltwater():
 
     def __init__(self):
         super().__init__()
