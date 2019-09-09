@@ -1,10 +1,12 @@
 from .biome import Biome
 
+# from environments.environment import Environment
+# from interfaces.habitat import IStagnant
+# from animals.
 
 # from interfaces.habitats import IStagnant
 
-
-class Swamp(Biome):
+class Swamp():
 
     def __init__(self, name):
         Biome.__init__(self, 8, 12, "Swamp")
@@ -31,7 +33,7 @@ class Swamp(Biome):
     #     return "This place has a bunch of animals in it"
 
     # def addInhabitant(self, item):
-    #     if not isinstance(item, IStagnant):
+    #     if not isinstance(item):
     #         raise TypeError(f"{item} is not of type IStagnant")
     #     self.inhabitants.append(item)
 
