@@ -7,3 +7,10 @@ class Biome:
         self.name = name
         self.animals = []
         self.plants = []
+
+        def add_animal(self, animal):
+            try:
+                if animal.IFreshwater and animal.ISwimming:
+                  self.animals.append(animal)
+            except AttributeError:
+                raise AttributeError("Cannot add non-aquatic, or saltwater animals to a river")

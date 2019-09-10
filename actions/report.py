@@ -1,7 +1,6 @@
 def build_facility_report(arboretum):
     for river in arboretum.rivers:
         # arb_river = ['%.8s' %{river.id}]
-
         try:
             print(f'River [{"%.8s" % river.id}]')
         except:

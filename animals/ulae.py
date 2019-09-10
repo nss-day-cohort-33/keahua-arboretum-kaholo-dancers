@@ -1,13 +1,11 @@
 from animals import Animal
-from interfaces.saltwater import ISaltwater
-from interfaces import Identifiable
-from interfaces.swimming import ISwimming
+from interfaces import *
 
-class Ulae(Animal, ISaltwater, Identifiable):
+class Ulae(Animal, ISaltwater, ISwimming, Identifiable):
 
     def __init__(self):
         Animal.__init__(self, "Lizardfish")
-        ISwimming.__init__(self, 4, 10)
+        ISwimming.__init__(self)
         ISaltwater.__init__(self)
         Identifiable.__init__(self)
         self.__prey = { "Smaller fish" }

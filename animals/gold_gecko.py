@@ -1,13 +1,10 @@
 from animals import Animal
-from interfaces.saltwater import ISaltwater
-from interfaces import Identifiable
-from interfaces.terrestrial import ITerrestrial
+from interfaces import *
 
-class Gold_Dust_Day_Gecko(Animal, ISaltwater, Identifiable, ITerrestrial):
+class Gold_Dust_Day_Gecko(Animal, ICan_Inhabit_Forest, Identifiable):
 
     def __init__(self):
         Animal.__init__(self, "Lizard")
-        ISaltwater.__init__(self)
+        ICan_Inhabit_Forest.__init__(self)
         Identifiable.__init__(self)
-        ITerrestrial.__init__(self)
         self.__prey = { "Insects" }

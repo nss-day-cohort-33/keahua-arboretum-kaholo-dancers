@@ -13,7 +13,7 @@ class Swamp(Biome, Identifiable):
         Biome.__init__(self, 8, 12, self)
         Identifiable.__init__(self)
         # self.name = name
-        # self.inhabitants = []
+        self.inhabitants = []
 
         # def add_plant(self, plant):
         #     try:
@@ -34,10 +34,10 @@ class Swamp(Biome, Identifiable):
     # def animal_count(self):
     #     return "This place has a bunch of animals in it"
 
-    # def addInhabitant(self, item):
-    #     if not isinstance(item):
-    #         raise TypeError(f"{item} is not of type IStagnant")
-    #     self.inhabitants.append(item)
+    def addInhabitant(self, item):
+        if not isinstance(item):
+            raise TypeError(f"{item} is not of type IStagnant")
+        self.inhabitants.append(item)
 
     # def __str__(self):
     #     return self.name

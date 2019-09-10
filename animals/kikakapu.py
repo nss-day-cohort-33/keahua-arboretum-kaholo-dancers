@@ -1,13 +1,12 @@
 from animals import Animal
-from interfaces.saltwater import ISaltwater
-from interfaces import Identifiable
-from interfaces.swimming import ISwimming
+from interfaces import *
 
-class Kikakapu(Animal, ISaltwater, Identifiable, ISwimming):
+class Kikakapu(Animal, Identifiable, ICan_Inhabit_Swamp, IFreshwater,ISwimming):
 
     def __init__(self):
         Animal.__init__(self, "Fish")
-        ISaltwater.__init__(self)
         Identifiable.__init__(self)
-        ISwimming.__init__(self, 4, 20)
+        ICan_Inhabit_Swamp.__init__(self)
+        IFreshwater.__init__(self)
+        ISwimming.__init__(self)
         self.__prey = { "Smaller Fish" }
