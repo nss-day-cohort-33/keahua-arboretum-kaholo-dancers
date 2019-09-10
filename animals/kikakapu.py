@@ -9,5 +9,5 @@ class Kikakapu(Animal, ISaltwater, Identifiable, ISwimming):
         Animal.__init__(self, "Fish")
         ISaltwater.__init__(self)
         Identifiable.__init__(self)
-        ISwimming.__init__(self, 4, 20)
-        self.__prey = ["Trout", "Mackarel", "Sardine"]
+        ISwimming.__init__(self)
+        self.prey = ["Trout", "Mackarel", "Sardine"]

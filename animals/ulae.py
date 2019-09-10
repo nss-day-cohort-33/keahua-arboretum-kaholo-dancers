@@ -7,7 +7,7 @@ class Ulae(Animal, ISaltwater, Identifiable):
 
     def __init__(self):
         Animal.__init__(self, "Lizardfish")
-        ISwimming.__init__(self, 4, 10)
+        ISwimming.__init__(self)
         ISaltwater.__init__(self)
         Identifiable.__init__(self)
-        self.__prey = ["Trout", "Mackarel", "Sardine"]
+        self.prey = ["Trout", "Mackarel", "Sardine"]

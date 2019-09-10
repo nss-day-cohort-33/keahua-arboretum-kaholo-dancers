@@ -1,11 +1,11 @@
 from animals import Animal
-from interfaces import IFlying
+# from interfaces import IFlying
 from interfaces import Identifiable
 
-class Pueo(Animal, IFlying, Identifiable):
+class Pueo(Animal, Identifiable):
 
     def __init__(self):
         Animal.__init__(self, "Short Eared Owl")
-        IFlying.__init__(self)
+        # IFlying.__init__(self)
         Identifiable.__init__(self)
-        self.__prey = ["Mouse", "Mongoose", "Rat"]
+        self.prey = ["Mouse", "Mongoose", "Rat"]

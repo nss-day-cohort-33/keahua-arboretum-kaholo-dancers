@@ -10,8 +10,17 @@ from animals.opeapea import Opeapea
 from animals.ulae import Ulae
 from animals.animal import Animal
 from actions.feeding import feeding_other
+from actions.feeding import animal_gets_fed
+from actions.feeding import other_animal_gets_fed
 
-
+dolphin = RiverDolphin()
+gecko = Gold_Dust_Day_Gecko()
+pueo = Pueo()
+spider = Hawaiian_Happy_Face_Spider()
+kikakapu = Kikakapu()
+goose = Nene_Goose()
+opeapea = Opeapea()
+ulae = Ulae()
 def feed_animal():
 
     print("1. River Dolphin")
@@ -32,31 +41,31 @@ def feed_animal_menu():
     choice = input(">> ")
 
     if choice == "1":
-        feeding(RiverDolphin)
+        animal_gets_fed(dolphin)
 
     if choice == "2":
-        feeding(Hawaiian_Happy_Face_Spider)
+        animal_gets_fed(spider)
 
     if choice == "3":
-        feeding(Pueo)
+        animal_gets_fed(pueo)
 
     if choice == "4":
-        feeding(Ulae)
+        animal_gets_fed(ulae)
 
     if choice == "5":
-        feeding(Gold_Dust_Day_Gecko)
+        animal_gets_fed(gecko)
         pass
 
     if choice == "6":
-        feeding(Nene_Goose)
+        animal_gets_fed(goose)
         pass
 
     if choice == "7":
-        feeding(Kikakapu)
+        animal_gets_fed(kikakapu)
         pass
 
     if choice == "8":
-        feeding_other(Opeapea)
+        other_animal_gets_fed(opeapea)
         pass
 
     if choice != "9":

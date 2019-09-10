@@ -1,4 +1,4 @@
-from .animal_interfaces.flying import IFlying
+# from .animal_interfaces.flying import IFlying
 from .animal_interfaces.freshwater import IFreshwater
 from .animal_interfaces.identifiable import Identifiable
 from .animal_interfaces.saltwater import ISaltwater

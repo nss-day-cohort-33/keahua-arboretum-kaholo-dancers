@@ -8,4 +8,4 @@ class Gold_Dust_Day_Gecko(Animal, ISaltwater, Identifiable):
         Animal.__init__(self, "Lizard")
         ISaltwater.__init__(self)
         Identifiable.__init__(self)
-        self.__prey = ["Termites", "Moths", "Beetles"]
+        self.prey = ["Termites", "Moths", "Beetles"]
