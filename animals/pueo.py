@@ -8,4 +8,4 @@ class Pueo(Animal, IFlying, Identifiable):
         Animal.__init__(self, "Short Eared Owl")
         IFlying.__init__(self)
         Identifiable.__init__(self)
-        self.__prey = { "Rodents", "Mongoose"}
+        self.__prey = ["Mouse", "Mongoose", "Rat"]

@@ -8,4 +8,4 @@ class Nene_Goose(Animal, IFlying, Identifiable):
         Animal.__init__(self, "Bird")
         IFlying.__init__(self)
         Identifiable.__init__(self)
-        self.__prey = { "Grass", "Weedy Plants", "Berries"}
+        self.__prey = ["Grass", "Weedy Plants", "Berries"]

@@ -1,5 +1,5 @@
 from animals import Animal
-from interfaces.flying import IFlying
+from interfaces import IFlying
 from interfaces import Identifiable
 
 class Opeapea(Animal, IFlying, Identifiable):
@@ -8,4 +8,4 @@ class Opeapea(Animal, IFlying, Identifiable):
         Animal.__init__(self, "Hawaiian Hiary Bat")
         IFlying.__init__(self)
         Identifiable.__init__(self)
-        self.__prey = { "Insects" }
+        self.__prey = [["Termites", "Moths", "Beetles"], ["Grass", "Weeds", "Berries"]]
