@@ -7,3 +7,13 @@ class Biome:
         self.name = name
         self.animals = []
         self.plants = []
+
+    def add_plant(self, plant, menu):
+        length = len(self.plants)
+        if length < self.max_plants:
+            self.plants.append(plant)
+        else:
+            print(f'That Biome Is Not Large Enough. Please Choose Another')
+            menu(plant)
+
+        

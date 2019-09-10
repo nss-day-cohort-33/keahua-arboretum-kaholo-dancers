@@ -12,7 +12,7 @@ def release_animal(arboretum):
     print("7. Kikakapu")
     print("8. Ope'ape'a")
 
-    choice = input("Choose animal to release > ")
+    # choice = input("Choose animal to release > ")
 
     # if choice == "1":
     #     animal = RiverDolphin()
