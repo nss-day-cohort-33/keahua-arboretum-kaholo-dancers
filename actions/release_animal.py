@@ -63,6 +63,13 @@ def release_animal(arboretum):
     if choice == "8":
         animal = Opeapea()
 
+        for index, mountain in enumerate(arboretum.mountains):
+            print(f'{index + 1}. Mountain {"%.8s" % mountain.id}')
+
+        print("Release the animal into which biome?")
+        choice = input("> ")
+
+        arboretum.mountains[int(choice) - 1].add_animal(animal)
 
     # for index, river in enumerate(arboretum.rivers):
     #     print(f'{index + 1}. River {"%.8s" % river.id}')

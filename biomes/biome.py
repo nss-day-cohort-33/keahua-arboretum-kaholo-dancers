@@ -8,5 +8,5 @@ class Biome:
         self.animals = []
         self.plants = []
 
-        def add_animal(self, animal):
-            self.animals.__add__(animal)
+    def add_animal(self, animal):
+        self.animals.append(animal)

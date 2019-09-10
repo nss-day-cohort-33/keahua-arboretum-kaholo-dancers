@@ -9,6 +9,9 @@ def build_facility_report(arboretum):
     for mountain in arboretum.mountains:
         try:
             print(f'Mountain [{"%.8s" % mountain.id}]')
+
+            for animal in mountain.animals:
+                print(f'{animal.name} [{"%.8" & animal.id}]')
         except:
             pass
 
