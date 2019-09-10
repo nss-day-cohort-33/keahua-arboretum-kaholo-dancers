@@ -17,13 +17,13 @@ def release_animal(arboretum):
     if choice == "1":
         animal = RiverDolphin()
 
-    for index, river in enumerate(arboretum.rivers):
-        print(f'{index + 1}. River {"%.8s" % river.id}')
+        for index, river in enumerate(arboretum.rivers):
+            print(f'{index + 1}. River {"%.8s" % river.id}')
 
-    print("Release the animal into which biome?")
-    choice = input("> ")
+        print("Release the animal into which biome?")
+        choice = input("> ")
 
-    arboretum.rivers[int(choice) - 1].animals.append(animal)
+        arboretum.rivers[int(choice) - 1].animals.add_animal(animal)
 
     if choice == "2":
         animal = Hawaiian_Happy_Face_Spider()
@@ -40,36 +40,36 @@ def release_animal(arboretum):
     if choice == "6":
         animal = Nene_Goose()
 
-    for index, grassland in enumerate(arboretum.grasslands):
-            print(f'{index + 1}. Grassland {"%.8s" % grassland.id}')
+        for index, grassland in enumerate(arboretum.grasslands):
+                print(f'{index + 1}. Grassland {"%.8s" % grassland.id}')
 
-    print("Release the animal into which biome?")
-    choice = input("> ")
+        print("Release the animal into which biome?")
+        choice = input("> ")
 
-    arboretum.grasslands[int(choice) - 1].animals.append(animal)
+        arboretum.grasslands[int(choice) - 1].animals.add_animal(animal)
 
     if choice == "7":
         animal = Kikakapu()
 
-    for index, swamp in enumerate(arboretum.swamps):
-        print(f'{index + 1}. swamp {"%.8s" % swamp.id}')
+        for index, swamp in enumerate(arboretum.swamps):
+            print(f'{index + 1}. swamp {"%.8s" % swamp.id}')
 
-    print("Release the animal into which biome?")
-    choice = input("> ")
+        print("Release the animal into which biome?")
+        choice = input("> ")
 
-    arboretum.swamps[int(choice) - 1].animals.append(animal)
+        arboretum.swamps[int(choice) - 1].animals.add_animal(animal)
 
 
     if choice == "8":
         animal = Opeapea()
 
 
-    for index, river in enumerate(arboretum.rivers):
-        print(f'{index + 1}. River {"%.8s" % river.id}')
+    # for index, river in enumerate(arboretum.rivers):
+    #     print(f'{index + 1}. River {"%.8s" % river.id}')
 
-    print("Release the animal into which biome?")
-    choice = input("> ")
+    # print("Release the animal into which biome?")
+    # choice = input("> ")
 
-    arboretum.rivers[int(choice) - 1].animals.append(animal)
+    # arboretum.rivers[int(choice) - 1].animals.add_animal(animal)
 
 
