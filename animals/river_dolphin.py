@@ -4,7 +4,7 @@ from interfaces import *
 class RiverDolphin(Animal, IFreshwater, ISwimming, ISaltwater, Identifiable):
 
     def __init__(self):
-        Animal.__init__(self, "River dolphin")
+        Animal.__init__(self, "Dolphin", "River Dolphin")
         IFreshwater.__init__(self)
         Identifiable.__init__(self)
         ISaltwater.__init__(self)
