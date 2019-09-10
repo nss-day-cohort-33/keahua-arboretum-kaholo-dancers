@@ -10,7 +10,7 @@ from interfaces import Identifiable
 class Swamp(Biome, Identifiable):
 
     def __init__(self):
-        Biome.__init__(self, 8, 12, self)
+        Biome.__init__(self, 8, 12, "Swamp")
         Identifiable.__init__(self)
         # self.name = name
         self.inhabitants = []

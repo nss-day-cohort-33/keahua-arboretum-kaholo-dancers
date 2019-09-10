@@ -23,10 +23,18 @@ def release_animal(arboretum):
         print("Release the animal into which biome?")
         choice = input("> ")
 
-        arboretum.rivers[int(choice) - 1].animals.add_animal(animal)
+        arboretum.rivers[int(choice) - 1].add_animal(animal)
 
     if choice == "2":
         animal = Hawaiian_Happy_Face_Spider()
+
+        for index, swamp in enumerate(arboretum.swamps):
+            print(f'{index + 1}. Swamp {"%.8s" % swamp.id}')
+
+        print("Release the animal into which biome?")
+        choice = input("> ")
+
+        arboretum.swamps[int(choice) - 1].add_animal(animal)
 
     if choice == "3":
         animal = Pueo()
@@ -34,8 +42,24 @@ def release_animal(arboretum):
     if choice == "4":
         animal = Ulae()
 
+        for index, coastline in enumerate(arboretum.coastlines):
+            print(f'{index + 1}. Coastline {"%.8s" % coastline.id}')
+
+        print("Release the animal into which biome?")
+        choice = input("> ")
+
+        arboretum.coastlines[int(choice) - 1].add_animal(animal)
+
     if choice == "5":
         animal = Gold_Dust_Day_Gecko()
+
+        for index, forest in enumerate(arboretum.forests):
+            print(f'{index + 1}. Forest {"%.8s" % forest.id}')
+
+        print("Release the animal into which biome?")
+        choice = input("> ")
+
+        arboretum.forests[int(choice) - 1].add_animal(animal)
 
     if choice == "6":
         animal = Nene_Goose()
@@ -46,7 +70,7 @@ def release_animal(arboretum):
         print("Release the animal into which biome?")
         choice = input("> ")
 
-        arboretum.grasslands[int(choice) - 1].animals.add_animal(animal)
+        arboretum.grasslands[int(choice) - 1].add_animal(animal)
 
     if choice == "7":
         animal = Kikakapu()
@@ -57,7 +81,7 @@ def release_animal(arboretum):
         print("Release the animal into which biome?")
         choice = input("> ")
 
-        arboretum.swamps[int(choice) - 1].animals.add_animal(animal)
+        arboretum.swamps[int(choice) - 1].add_animal(animal)
 
 
     if choice == "8":
@@ -70,6 +94,7 @@ def release_animal(arboretum):
         choice = input("> ")
 
         arboretum.mountains[int(choice) - 1].add_animal(animal)
+        print("it added")
 
     # for index, river in enumerate(arboretum.rivers):
     #     print(f'{index + 1}. River {"%.8s" % river.id}')

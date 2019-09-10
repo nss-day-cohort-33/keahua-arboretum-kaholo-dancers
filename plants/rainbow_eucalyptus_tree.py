@@ -1,6 +1,6 @@
-from plant import Plant
+from .plant import Plant
 
 class Rainbow_Tree(Plant):
 
     def __init__(self):
-        Plant.__init__(self, "full", 8, "low")
+        Plant.__init__(self, "full", 8, "low", "Rainbow Eucalyptus Tree")

@@ -6,7 +6,7 @@ from .biome import Biome
 class River(Biome, IFreshwater, Identifiable):
 
     def __init__(self):
-        Biome.__init__(self, 12, 6, self)
+        Biome.__init__(self, 12, 6, "River")
         Identifiable.__init__(self)
 
     # def add_animal(self, animal):
