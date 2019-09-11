@@ -24,7 +24,7 @@ def main_menu():
     Arguments: None
     """
     build_menu()
-    choice = input(">> ")
+    choice = input(">> \n")
 
     if choice == "1":
         annex_habitat(keahua)
