@@ -31,13 +31,16 @@ def release_animal(arboretum):
                     num += 1
                 except:
                     pass
+            print(f'x. cancel')
 
             print("Release the animal into which biome?")
             choice = input("> ")
 
             river_length = len(arboretum.rivers)
 
-            if int(choice) <= river_length:
+            if choice == "x":
+                pass
+            elif int(choice) <= river_length:
                 arboretum.rivers[int(choice) - 1].add_animal(animal, animal_to_biome_1)
             else:
                 arboretum.coastlines[int(choice) - river_length - 1].add_animal(animal, animal_to_biome_1)
@@ -50,11 +53,15 @@ def release_animal(arboretum):
         def animal_to_biome_2(animal):
             for index, swamp in enumerate(arboretum.swamps):
                 print(f'{index + 1}. {swamp.name} ({len(swamp.animals)} animals)')
+            print(f'x. cancel')
 
             print("Release the animal into which biome?")
             choice = input("> ")
 
-            arboretum.swamps[int(choice) - 1].add_animal(animal, animal_to_biome_2)
+            if choice == "x":
+                pass
+            else:
+                arboretum.swamps[int(choice) - 1].add_animal(animal, animal_to_biome_2)
 
         animal_to_biome_2(animal)
 
@@ -76,13 +83,16 @@ def release_animal(arboretum):
                     num += 1
                 except:
                     pass
+            print(f'x. cancel')
 
             print("Release the animal into which biome?")
             choice = input("> ")
 
             grassland_length = len(arboretum.grasslands)
 
-            if int(choice) <= grassland_length:
+            if choice == "x":
+                pass
+            elif int(choice) <= grassland_length:
                 arboretum.grasslands[int(choice) - 1].add_animal(animal, animal_to_biome_3)
             else:
                 arboretum.forests[int(choice) - grassland_length - 1].add_animal(animal, animal_to_biome_3)
@@ -95,11 +105,16 @@ def release_animal(arboretum):
         def animal_to_biome_4(animal):
             for index, coastline in enumerate(arboretum.coastlines):
                 print(f'{index + 1}. {coastline.name} ({len(coastline.animals)} animals)')
+            print(f'x. cancel')
 
             print("Release the animal into which biome?")
             choice = input("> ")
 
-            arboretum.coastlines[int(choice) - 1].add_animal(animal, animal_to_biome_4)
+            if choice == "x":
+                pass
+            else:
+                arboretum.coastlines[int(choice) - 1].add_animal(animal, animal_to_biome_4)
+
         animal_to_biome_4(animal)
 
     if choice == "5":
@@ -108,11 +123,15 @@ def release_animal(arboretum):
         def animal_to_biome_5(animal):
             for index, forest in enumerate(arboretum.forests):
                 print(f'{index + 1}. {forest.name} ({len(forest.animals)} animals)')
+            print(f'x. cancel')
 
             print("Release the animal into which biome?")
             choice = input("> ")
 
-            arboretum.forests[int(choice) - 1].add_animal(animal, animal_to_biome_5)
+            if choice == "x":
+                pass
+            else:
+                arboretum.forests[int(choice) - 1].add_animal(animal, animal_to_biome_5)
 
         animal_to_biome_5(animal)
 
@@ -126,7 +145,10 @@ def release_animal(arboretum):
             print("Release the animal into which biome?")
             choice = input("> ")
 
-            arboretum.grasslands[int(choice) - 1].add_animal(animal, animal_to_biome_6)
+            if choice == "x":
+                pass
+            else:
+                arboretum.grasslands[int(choice) - 1].add_animal(animal, animal_to_biome_6)
 
         animal_to_biome_6(animal)
 
@@ -147,12 +169,15 @@ def release_animal(arboretum):
                     num += 1
                 except:
                     pass
+            print(f'x. cancel')
 
             print("Release the animal into which biome?")
             choice = input("> ")
 
             river_length = len(arboretum.rivers)
 
+            if choice == "x":
+                pass
             if int(choice) <= river_length:
                 arboretum.rivers[int(choice) - 1].add_animal(animal, animal_to_biome_7)
             else:
@@ -178,13 +203,16 @@ def release_animal(arboretum):
                     num += 1
                 except:
                     pass
+            print(f'x. cancel')
 
             print("Release the animal into which biome?")
             choice = input("> ")
 
             mountain_length = len(arboretum.mountains)
 
-            if int(choice) <= mountain_length:
+            if choice == "x":
+                pass
+            elif int(choice) <= mountain_length:
                 arboretum.mountains[int(choice) - 1].add_animal(animal, animal_to_biome_8)
             else:
                 arboretum.forests[int(choice) - mountain_length - 1].add_animal(animal, animal_to_biome_8)
