@@ -18,14 +18,17 @@ def release_animal(arboretum):
         animal = RiverDolphin()
 
         def animal_to_biome_1(animal):
-            for index, river in enumerate(arboretum.rivers):
+            num = 1
+            for river in (arboretum.rivers):
                 try:
-                    print(f'{index + 1}. {river.name} ({len(river.animals)} animals)')
+                    print(f'{num}. {river.name} ({len(river.animals)} animals)')
+                    num += 1
                 except:
                     pass
-            for index, coastline in enumerate(arboretum.coastlines):
+            for coastline in (arboretum.coastlines):
                 try:
-                    print(f'{index + 1}. {coastline.name} ({len(coastline.animals)} animals)')
+                    print(f'{num}. {coastline.name} ({len(coastline.animals)} animals)')
+                    num += 1
                 except:
                     pass
 
@@ -37,7 +40,7 @@ def release_animal(arboretum):
             if int(choice) <= river_length:
                 arboretum.rivers[int(choice) - 1].add_animal(animal, animal_to_biome_1)
             else:
-                arboretum.coastlines[int(choice) - 1].add_animal(animal, animal_to_biome_1)
+                arboretum.coastlines[int(choice) - river_length - 1].add_animal(animal, animal_to_biome_1)
 
         animal_to_biome_1(animal)
 
@@ -60,14 +63,17 @@ def release_animal(arboretum):
         animal = Pueo()
 
         def animal_to_biome_3(animal):
-            for index, grassland in enumerate(arboretum.grasslands):
+            num = 1
+            for grassland in (arboretum.grasslands):
                 try:
-                    print(f'{index + 1}. {grassland.name} ({len(grassland.animals)} animals)')
+                    print(f'{num}. {grassland.name} ({len(grassland.animals)} animals)')
+                    num += 1
                 except:
                     pass
-            for index, forest in enumerate(arboretum.forests):
+            for forest in (arboretum.forests):
                 try:
-                    print(f'{index + 1}. {forest.name} ({len(forest.animals)} animals)')
+                    print(f'{num}. {forest.name} ({len(forest.animals)} animals)')
+                    num += 1
                 except:
                     pass
 
@@ -79,7 +85,7 @@ def release_animal(arboretum):
             if int(choice) <= grassland_length:
                 arboretum.grasslands[int(choice) - 1].add_animal(animal, animal_to_biome_3)
             else:
-                arboretum.forests[int(choice) - 1].add_animal(animal, animal_to_biome_3)
+                arboretum.forests[int(choice) - grassland_length - 1].add_animal(animal, animal_to_biome_3)
 
         animal_to_biome_3(animal)
 
@@ -107,7 +113,7 @@ def release_animal(arboretum):
             choice = input("> ")
 
             arboretum.forests[int(choice) - 1].add_animal(animal)
-            
+
         animal_to_biome_5(animal)
 
     if choice == "6":
@@ -128,14 +134,17 @@ def release_animal(arboretum):
         animal = Kikakapu()
 
         def animal_to_biome_7(animal):
-            for index, river in enumerate(arboretum.rivers):
+            num = 1
+            for river in (arboretum.rivers):
                 try:
-                    print(f'{index + 1}. {river.name} ({len(river.animals)} animals)')
+                    print(f'{num}. {river.name} ({len(river.animals)} animals)')
+                    num += 1
                 except:
                     pass
-            for index, swamp in enumerate(arboretum.swamps):
+            for swamp in (arboretum.swamps):
                 try:
-                    print(f'{index + 1}. {swamp.name} ({len(swamp.animals)} animals)')
+                    print(f'{num}. {swamp.name} ({len(swamp.animals)} animals)')
+                    num += 1
                 except:
                     pass
 
@@ -147,7 +156,7 @@ def release_animal(arboretum):
             if int(choice) <= river_length:
                 arboretum.rivers[int(choice) - 1].add_animal(animal, animal_to_biome_7)
             else:
-                arboretum.swamps[int(choice) - 1].add_animal(animal, animal_to_biome_7)
+                arboretum.swamps[int(choice) - river_length - 1].add_animal(animal, animal_to_biome_7)
 
         animal_to_biome_7(animal)
 
@@ -156,14 +165,17 @@ def release_animal(arboretum):
         animal = Opeapea()
 
         def animal_to_biome_8(animal):
-            for index, mountain in enumerate(arboretum.mountains):
+            num = 1
+            for mountain in (arboretum.mountains):
                 try:
-                    print(f'{index + 1}. {mountain.name} ({len(mountain.animals)} animals)')
+                    print(f'{num}. {mountain.name} ({len(mountain.animals)} animals)')
+                    num += 1
                 except:
                     pass
-            for index, forest in enumerate(arboretum.forests):
+            for forest in (arboretum.forests):
                 try:
-                    print(f'{index + 1}. {forest.name} ({len(forest.animals)} animals)')
+                    print(f'{num}. {forest.name} ({len(forest.animals)} animals)')
+                    num += 1
                 except:
                     pass
 
@@ -175,7 +187,7 @@ def release_animal(arboretum):
             if int(choice) <= mountain_length:
                 arboretum.mountains[int(choice) - 1].add_animal(animal, animal_to_biome_8)
             else:
-                arboretum.forests[int(choice) - 1].add_animal(animal, animal_to_biome_8)
+                arboretum.forests[int(choice) - mountain_length - 1].add_animal(animal, animal_to_biome_8)
 
         animal_to_biome_8(animal)
 
