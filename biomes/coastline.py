@@ -5,5 +5,5 @@ from interfaces import Identifiable
 class Coastline(Biome, Identifiable):
 
     def __init__(self):
-        Biome.__init__(self, 15, 3, self)
+        Biome.__init__(self, 15, 3, "Coastline")
         Identifiable.__init__(self)
