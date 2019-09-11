@@ -1,4 +1,3 @@
-from interfaces import Identifiable
 from animals import RiverDolphin
 from interfaces import *
 from .biome import Biome

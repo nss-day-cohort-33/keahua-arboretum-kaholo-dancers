@@ -2,6 +2,9 @@ class Animal:
 
     def __init__(self, species, name):
         self.species = species
+        self.prey = []
+        
+   
         self.name = name
 
     # def move(self, propulsion, speed):
