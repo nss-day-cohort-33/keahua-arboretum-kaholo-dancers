@@ -13,7 +13,7 @@ class Swamp(Biome, Identifiable):
         Biome.__init__(self, 8, 12, "Swamp")
         Identifiable.__init__(self)
         # self.name = name
-        # self.inhabitants = []
+        self.inhabitants = []
 
         # def add_plant(self, plant):
         #     try:
