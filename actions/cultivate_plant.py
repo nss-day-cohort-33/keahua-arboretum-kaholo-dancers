@@ -23,11 +23,13 @@ def cultivate_plant(arboretum):
                         print(f'{index + 1}. Mountain ({len(mountain.plants)} plants)')
                     except:
                         pass
-                
+                print(f'x. cancel')
                 
                 choice = input("\nWhere would you like to plant the Mountain Apple Tree > \n")
 
-                if int(choice) > len(arboretum.mountains):
+                if choice == "x":
+                    pass
+                elif int(choice) > len(arboretum.mountains):
                     print(f'Invalid Entry. Please choose from menu.')
                     sub_menu_1(plant)
                 else:
@@ -48,10 +50,13 @@ def cultivate_plant(arboretum):
                         print(f'{index + 1}. Grassland ({len(grassland.plants)} plants)')
                     except:
                         pass
+                print(f'x. cancel')
                 
                 choice = input("\nWhere would you like to plant the Silversword > \n")
 
-                if int(choice) > len(arboretum.grasslands):
+                if choice == "x":
+                    pass
+                elif int(choice) > len(arboretum.grasslands):
                     print(f'Invalid Entry. Please choose from menu.')
                     sub_menu_2(plant)
                 else:
@@ -72,10 +77,13 @@ def cultivate_plant(arboretum):
                         print(f'{index + 1}. Forest ({len(forest.plants)} plants)')
                     except:
                         pass
+                print(f'x. cancel')
                 
                 choice = input("\nWhere would you like to plant the Rainbow Eucalyptus Tree > \n")
 
-                if int(choice) > len(arboretum.forests):
+                if choice == "x":
+                    pass
+                elif int(choice) > len(arboretum.forests):
                     print(f'Invalid Entry. Please choose from menu.')
                     sub_menu_3(plant)
                 else:
@@ -104,20 +112,22 @@ def cultivate_plant(arboretum):
                         num += 1
                     except:
                         pass
+                print(f'x. cancel')
                         
                 choice = input("\nWhere would you like to plant the Blue Jade Vine > \n")
 
                 swamp_length = len(arboretum.swamps)
                 both = swamp_length + len(arboretum.grasslands)
 
-                if int(choice) > both:
+                if choice == "x":
+                    pass
+                elif int(choice) > both:
                     print(f'Invalid Entry. Please choose from menu.')
                     sub_menu_4(plant)
+                elif int(choice) <= swamp_length:
+                    arboretum.swamps[int(choice) - 1].add_plant(plant, sub_menu_4)
                 else:
-                    if int(choice) <= swamp_length:
-                        arboretum.swamps[int(choice) - 1].add_plant(plant, sub_menu_4)
-                    else:
-                        arboretum.grasslands[int(choice) - swamp_length - 1].add_plant(plant, sub_menu_4)
+                    arboretum.grasslands[int(choice) - swamp_length - 1].add_plant(plant, sub_menu_4)
             
             sub_menu_4(blue_jade)
         
