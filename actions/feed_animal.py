@@ -1,5 +1,4 @@
 from actions.feeding import feeding
-# from index import main_menu
 from animals.gold_gecko import Gold_Dust_Day_Gecko
 from animals.pueo import Pueo
 from animals.happy_face import Hawaiian_Happy_Face_Spider
@@ -21,8 +20,9 @@ kikakapu = Kikakapu()
 goose = Nene_Goose()
 opeapea = Opeapea()
 ulae = Ulae()
-def feed_animal():
 
+
+def feed_animal_menu():
     print("1. River Dolphin")
     print("2. Happy-Face Spider")
     print("3. Pueo")
@@ -32,12 +32,6 @@ def feed_animal():
     print("7. Kikakapu")
     print("8. Ope'ape'a")
 
-    choice = input("Choose an animal to feed > ")
-
-
-def feed_animal_menu():
-
-    feed_animal()
     choice = input(">> ")
 
     if choice == "1":

@@ -3,7 +3,7 @@ from arboretum import Arboretum
 from actions.annex import annex_habitat
 from actions.release_animal import release_animal
 from actions.report import build_facility_report
-from actions.feed_animal import feed_animal
+# from actions.feed_animal import feed_animal
 from actions.cultivate_plant import cultivate_plant
 from actions.feed_animal import feed_animal_menu
 
