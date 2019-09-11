@@ -7,7 +7,7 @@ def release_animal(arboretum):
     print("2. Happy-Face Spider")
     print("3. Pueo")
     print("4. Ulae")
-    print("2. Gold Dust Day Gecko")
+    print("5. Gold Dust Day Gecko")
     print("6. Nene Goose")
     print("7. Kikakapu")
     print("8. Ope'ape'a")

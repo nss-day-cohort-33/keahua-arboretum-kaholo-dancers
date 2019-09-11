@@ -2,10 +2,10 @@ def build_facility_report(arboretum):
     for river in arboretum.rivers:
         try:
             print(f'River [{"%.8s" % river.id}]')
-
+            print(f'    River Plants')
             for plant in river.plants:
                 print(f'{plant.name} [{"%.8s" % plant.id}]')
-
+            print(f'    River Animals')
             for animal in river.animals:
                 print(f'    {animal.name} ({"%.8s" % animal.id})')
 

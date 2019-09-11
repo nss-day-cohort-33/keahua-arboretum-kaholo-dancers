@@ -14,8 +14,8 @@ class Biome:
         if length < self.max_animals:
             self.animals.append(animal)
         else:
-            print(f'***That Biome is not large enough. Please choose Another***')
-            print(f'              ***Please choose another one***')
+            print(f'***   That Biome is not large enough   ***')
+            print(f'   ***   Please choose another one   ***')
             menu(animal)
 
 
