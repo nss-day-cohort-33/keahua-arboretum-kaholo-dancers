@@ -49,12 +49,12 @@ def release_animal(arboretum):
 
         def animal_to_biome_2(animal):
             for index, swamp in enumerate(arboretum.swamps):
-                print(f'{index + 1}. Swamp {"%.8s" % swamp.id}')
+                print(f'{index + 1}. {swamp.name} ({len(swamp.animals)} animals)')
 
             print("Release the animal into which biome?")
             choice = input("> ")
 
-            arboretum.swamps[int(choice) - 1].add_animal(animal)
+            arboretum.swamps[int(choice) - 1].add_animal(animal, animal_to_biome_2)
 
         animal_to_biome_2(animal)
 
@@ -94,12 +94,12 @@ def release_animal(arboretum):
 
         def animal_to_biome_4(animal):
             for index, coastline in enumerate(arboretum.coastlines):
-                print(f'{index + 1}. Coastline {"%.8s" % coastline.id}')
+                print(f'{index + 1}. {coastline.name} ({len(coastline.animals)} animals)')
 
             print("Release the animal into which biome?")
             choice = input("> ")
 
-            arboretum.coastlines[int(choice) - 1].add_animal(animal)
+            arboretum.coastlines[int(choice) - 1].add_animal(animal, animal_to_biome_4)
         animal_to_biome_4(animal)
 
     if choice == "5":
@@ -107,12 +107,12 @@ def release_animal(arboretum):
 
         def animal_to_biome_5(animal):
             for index, forest in enumerate(arboretum.forests):
-                print(f'{index + 1}. Forest {"%.8s" % forest.id}')
+                print(f'{index + 1}. {forest.name} ({len(forest.animals)} animals)')
 
             print("Release the animal into which biome?")
             choice = input("> ")
 
-            arboretum.forests[int(choice) - 1].add_animal(animal)
+            arboretum.forests[int(choice) - 1].add_animal(animal, animal_to_biome_5)
 
         animal_to_biome_5(animal)
 
@@ -121,12 +121,12 @@ def release_animal(arboretum):
 
         def animal_to_biome_6(animal):
             for index, grassland in enumerate(arboretum.grasslands):
-                    print(f'{index + 1}. Grassland {"%.8s" % grassland.id}')
+                    print(f'{index + 1}. {grassland.name} ({len(grassland.animals)} animals)')
 
             print("Release the animal into which biome?")
             choice = input("> ")
 
-            arboretum.grasslands[int(choice) - 1].add_animal(animal)
+            arboretum.grasslands[int(choice) - 1].add_animal(animal, animal_to_biome_6)
 
         animal_to_biome_6(animal)
 

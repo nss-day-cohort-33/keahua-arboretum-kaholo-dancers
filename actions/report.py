@@ -7,7 +7,7 @@ def build_facility_report(arboretum):
                 print(f'{plant.name} [{"%.8s" % plant.id}]')
 
             for animal in river.animals:
-                print(f'{animal.name} [{"%.8s" % animal.id}]')
+                print(f'    {animal.name} ({"%.8s" % animal.id})')
 
         except:
             pass
@@ -20,7 +20,7 @@ def build_facility_report(arboretum):
                 print(f'{plant.name} [{"%.8s" % plant.id}]')
 
             for animal in mountain.animals:
-                print(f'{animal.name} [{"%.8s" % animal.id}]')
+                print(f'    {animal.name} ({"%.8s" % animal.id})')
         except:
             pass
 
@@ -32,7 +32,7 @@ def build_facility_report(arboretum):
                 print(f'{plant.name} [{"%.8s" % plant.id}]')
 
             for animal in coastline.animals:
-                print(f'{animal.name} [{"%.8s" % animal.id}]')
+                print(f'    {animal.name} ({"%.8s" % animal.id})')
 
         except:
             pass
@@ -45,7 +45,7 @@ def build_facility_report(arboretum):
                 print(f'{plant.name} [{"%.8s" % plant.id}]')
 
             for animal in forest.animals:
-                print(f'{animal.name} [{"%.8s" % animal.id}]')
+                print(f'    {animal.name} ({"%.8s" % animal.id})')
 
         except:
             pass
@@ -58,7 +58,7 @@ def build_facility_report(arboretum):
                 print(f'{plant.name} [{"%.8s" % plant.id}]')
 
             for animal in grassland.animals:
-                print(f'{animal.name} [{"%.8s" % animal.id}]')
+                print(f'    {animal.name} ({"%.8s" % animal.id})')
         except:
             pass
 
@@ -70,8 +70,8 @@ def build_facility_report(arboretum):
                 print(f'{plant.name} [{"%.8s" % plant.id}]')
 
             for animal in swamp.animals:
-                print(f'{animal.name} [{"%.8s" % animal.id}]')
-                
+                print(f'    {animal.name} ({"%.8s" % animal.id})')
+
         except:
             pass
 
