@@ -32,7 +32,7 @@ def feed_animal_menu():
     print("7. Kikakapu")
     print("8. Ope'ape'a")
 
-    choice = input(">> ")
+    choice = input("Choose an animal to feed > ")
 
     if choice == "1":
         animal_gets_fed(dolphin)
