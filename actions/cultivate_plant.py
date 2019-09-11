@@ -27,14 +27,18 @@ def cultivate_plant(arboretum):
                 
                 choice = input("\nWhere would you like to plant the Mountain Apple Tree > \n")
 
-                arboretum.mountains[int(choice) - 1].add_plant(plant, sub_menu_1)
+                if int(choice) > len(arboretum.mountains):
+                    print(f'Invalid Entry. Please choose from menu.')
+                    sub_menu_1(plant)
+                else:
+                    arboretum.mountains[int(choice) - 1].add_plant(plant, sub_menu_1)
             
             sub_menu_1(mountain_apple_tree)
         
         else:
             print(f'\nThere are no biomes available for this plant! Please annex one.\n')
 
-    if choice == "2":
+    elif choice == "2":
         if len(arboretum.grasslands) > 0:
             silversword = Silversword()
 
@@ -47,14 +51,18 @@ def cultivate_plant(arboretum):
                 
                 choice = input("\nWhere would you like to plant the Silversword > \n")
 
-                arboretum.grasslands[int(choice) - 1].add_plant(plant, sub_menu_2)
+                if int(choice) > len(arboretum.grasslands):
+                    print(f'Invalid Entry. Please choose from menu.')
+                    sub_menu_2(plant)
+                else:
+                    arboretum.grasslands[int(choice) - 1].add_plant(plant, sub_menu_2)
 
             sub_menu_2(silversword)
         
         else:
             print(f'\nThere are no biomes available for this plant! Please annex one.\n')
 
-    if choice == "3":
+    elif choice == "3":
         if len(arboretum.forests) > 0:
             rainbow_tree = Rainbow_Tree()
 
@@ -67,14 +75,18 @@ def cultivate_plant(arboretum):
                 
                 choice = input("\nWhere would you like to plant the Rainbow Eucalyptus Tree > \n")
 
-                arboretum.forests[int(choice) - 1].add_plant(plant, sub_menu_3)
+                if int(choice) > len(arboretum.forests):
+                    print(f'Invalid Entry. Please choose from menu.')
+                    sub_menu_3(plant)
+                else:
+                    arboretum.forests[int(choice) - 1].add_plant(plant, sub_menu_3)
 
             sub_menu_3(rainbow_tree)
         
         else:
             print(f'\nThere are no biomes available for this plant! Please annex one.\n')
 
-    if choice == "4":
+    elif choice == "4":
         if len(arboretum.swamps) or len(arboretum.grasslands) > 0:
             blue_jade = Blue_Jade()
 
@@ -96,19 +108,27 @@ def cultivate_plant(arboretum):
                 choice = input("\nWhere would you like to plant the Blue Jade Vine > \n")
 
                 swamp_length = len(arboretum.swamps)
+                both = swamp_length + len(arboretum.grasslands)
 
-                if int(choice) <= swamp_length:
-                    arboretum.swamps[int(choice) - 1].add_plant(plant, sub_menu_4)
+                if int(choice) > both:
+                    print(f'Invalid Entry. Please choose from menu.')
+                    sub_menu_4(plant)
                 else:
-                    arboretum.grasslands[int(choice) - swamp_length - 1].add_plant(plant, sub_menu_4)
+                    if int(choice) <= swamp_length:
+                        arboretum.swamps[int(choice) - 1].add_plant(plant, sub_menu_4)
+                    else:
+                        arboretum.grasslands[int(choice) - swamp_length - 1].add_plant(plant, sub_menu_4)
             
             sub_menu_4(blue_jade)
         
         else:
             print(f'\nThere are no biomes available for this plant! Please annex one.\n')
         
-    if choice == "5":
+    elif choice == "5":
         pass
+
+    else:
+        print(f'\nThis is not a valid input\n')
 
 
     
