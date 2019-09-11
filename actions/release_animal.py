@@ -11,6 +11,7 @@ def release_animal(arboretum):
     print("6. Nene Goose")
     print("7. Kikakapu")
     print("8. Ope'ape'a")
+    print("9. Main Menu")
 
     choice = input("Choose animal to release > ")
 
@@ -218,6 +219,9 @@ def release_animal(arboretum):
                 arboretum.forests[int(choice) - mountain_length - 1].add_animal(animal, animal_to_biome_8)
 
         animal_to_biome_8(animal)
+
+    if choice == "9":
+        pass
 
     # for index, river in enumerate(arboretum.rivers):
     #     print(f'{index + 1}. River {"%.8s" % river.id}')
