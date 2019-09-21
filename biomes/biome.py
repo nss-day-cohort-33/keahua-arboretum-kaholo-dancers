@@ -18,11 +18,12 @@ class Biome:
             print(f'   ***   Please choose another one   ***')
             menu(animal)
 
-
+    #Method used to add a plant to the plant list on the individual biomes. Takes the plant instance and the function that runs the menu as arguments
     def add_plant(self, plant, menu):
         length = len(self.plants)
         if length < self.max_plants:
             self.plants.append(plant)
+        #If the user has exceeded the max number of plants allowed in the biome then an error is thrown and the user is given a chance to re-select
         else:
             print(f'That Biome Is Not Large Enough. Please Choose Another')
             menu(plant)
